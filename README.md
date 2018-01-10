@@ -1,2 +1,2 @@
-# Compiler_design_project
-Code for building compiler from scratch
+# Lexical Analyser for C-Compiler
+Lex code for scanner of c-compiler
