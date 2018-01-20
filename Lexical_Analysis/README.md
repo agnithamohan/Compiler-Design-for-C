@@ -25,7 +25,7 @@ eg: To run test-1.c
 ## Authors
 
 * **Agnitha Mohan** - *15co201*
-* **Vasudha ** - *15co211*
+* **Vasudha** - *15co211*
 
 ## Acknowledgments
 
