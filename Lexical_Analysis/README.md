@@ -25,8 +25,8 @@ eg: To run test-1.c
 ## Authors
 
 * **Agnitha Mohan** - *15co201*
-* **Vasudha** - *15co211*
+* **Vasudha Boddukuri** - *15co211*
 
 ## Acknowledgments
 
-We would like to thank the institute for giving us an opportunity to do this project. A special thanks to the course instructors Ms.Shanti Thilagam, Ms.Sushmita, Ms.Umapriya and the teaching assistants for their constant help and support. 
+We would like to thank the institute for giving us an opportunity to do this project. A special thanks to the course instructors Ms.Santhi Thilagam, Ms.Sushmita, Ms.Umapriya and the teaching assistants for their constant help and support. 
