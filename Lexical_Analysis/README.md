@@ -3,7 +3,7 @@
 Lexical Analysis is the first phase of Compiler Design. A lexical analyzer is commonly referred to as a scanner. In this phase the source program is converted into a sequence of tokens. A tool called Lex is used to implement this phase. 
 
 ## Getting Started-Steps to compile and run
-1. lex iflex.l
+1. lex scanner.l
 2. gcc lex.yy.c
 3. ./a.out <test.c
 
