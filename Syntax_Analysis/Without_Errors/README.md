@@ -1,3 +1,3 @@
 # Test Cases With Errors 
-Simple test cases with syntax errors
+Simple test cases without any syntax errors
 
