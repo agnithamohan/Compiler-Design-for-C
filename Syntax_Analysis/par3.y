@@ -7,10 +7,9 @@
 #include<ctype.h>
 
  int lineno;
+extern int comment_nesting;
 
-int flag = 0;
-extern int cc_comment; 
-extern int co_comment; 
+int flag = 0; 
 extern void display();
 extern void cdisplay();
 %}
@@ -191,15 +190,15 @@ main()
 {
 
     yyparse();
+    if(comment_nesting!=0)
+        printf("LEXICAL ERROR : Unterminated Comment\n");
 
-  
+  	
     if(!flag)
     {
         printf("\nParsing successful!\n");
     }
 
-	if (cc_comment!=co_comment)
-		printf("Unterminated comment");
 	display();	
 	cdisplay();
 }

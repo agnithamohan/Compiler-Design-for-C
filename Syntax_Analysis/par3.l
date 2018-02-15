@@ -2,9 +2,8 @@
 #include "y.tab.h"
 #include<string.h>
 #include<stdio.h>
-int cc_comment=0, co_comment=0; 
 int lineno=1;
-
+int comment_nesting = 0; 
 int eleCount=50;
 	
      
@@ -348,23 +347,26 @@ ID {alpha}({alpha}|{digit})*
 WHITESPACE " "|"	"|"\n"
 
 
+%x SC_COMMENT
 
 
 
 %%
 
-"#include<"{alpha}+".h>" {  }
+"/*"             { comment_nesting++; BEGIN(SC_COMMENT); }
+<SC_COMMENT>{
+  "/*"           { comment_nesting++; }
 
-
-
-
-
-"/*"([^*]|\*+[^*/])*+[\n]+"*/" 
-
+  "*"+"/"        { comment_nesting=0;
+                    BEGIN(INITIAL);  }
+  "*"+           ;
+[/]            ;
+\n             { lineno++;}
+}
 
 \/\/[^\n]*[\n]? { lineno++; }
 
-"//".* 
+
 
 "break"			{ return(BREAK); }
 "char"			{ return(CHAR); }
@@ -444,14 +446,6 @@ WHITESPACE " "|"	"|"\n"
 "."			{ return('.'); }
 "?"			{ return('?'); }
 ":"			{ return(':'); }
-
-"/*" {
-	co_comment++;
-}
-
-"*/" {
-	cc_comment++;
-}
 
 {WHITESPACE}	{ if(yytext[0]=='\n') { lineno++; } };
 
