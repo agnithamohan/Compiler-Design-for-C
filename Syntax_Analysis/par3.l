@@ -353,6 +353,8 @@ WHITESPACE " "|"	"|"\n"
 
 %%
 
+#include[ ]?<{alpha}*.h> {}
+
 "/*"             { comment_nesting++; BEGIN(SC_COMMENT); }
 <SC_COMMENT>{
   "/*"           { comment_nesting++; }
