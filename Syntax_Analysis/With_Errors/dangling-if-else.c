@@ -1,23 +1,26 @@
-#include<stdio.h>
+
 
 void main()
 {
-	int a=5;
+	int a=5,b; 
 	if(a>10)
 	  {
-		printf("a is greater than 10"); 
+		b=1; 
 	   }
 	else if(a<10)
 	  {	
-		printf("a is less than 10"); 
-	   }
+		b=-1; 		
+	 }
 	else
 	  {
-		printf("a is equal to 10");
-	   }
+		b=0; 		
+    }
 	else
           {
-		printf("Invalid");
+		b=100; 
+
            }
 	
 }
+
+
