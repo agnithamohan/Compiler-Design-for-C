@@ -3,9 +3,10 @@
 Syntax Analysis is the second phase of Compiler Design. A syntax analyzer is commonly referred to as a parser. This phase takes the stream of tokens from the lexical phase as input and analyze the program based on some production rules. The tools Lex and Yacc are used to implement this phase. 
 
 ## Getting Started-Steps to compile and run
-1.
-2. 
-3. 
+1. lex scanner.l
+2. yacc parser.y
+3. gcc lex.yy.c y.tab.c -lm -ll
+4. ./a.out<test.c
 
 ## Prerequisites
 
@@ -22,7 +23,7 @@ sudo apt-get install bison
 ## Running the tests
 
 Run tests by adding the test file's name in the last step of compiling and running. 
-eg: 
+eg: ./a.out<test.c
 
 ## Authors
 
