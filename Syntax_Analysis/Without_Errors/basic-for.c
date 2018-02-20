@@ -9,17 +9,13 @@ void main()
 {
     int num, i, value = 1;
 
-    printf("Enter a positive integer: ");
-    scanf("%d", &num);
-
+    num=10; 
     
     for(i = 1; i <= num; ++i)
     {
         value *= i;
     }
 
-    printf("Facorial of %d is %d", num,value); // prints calculated factorial  
-
+    
     return 0;
 }
-

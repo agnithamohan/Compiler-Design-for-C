@@ -1,10 +1,9 @@
-#include <stdio.h>
-
 int count=0; 
 int i, j; 
  
 void find_prime(int n)
 {
+    int flag;
 		for(i=2 ; i<=n ; i++)
 	{
 		count = 0;		
@@ -15,14 +14,13 @@ void find_prime(int n)
 		}
 		
 		if(count == 2)
-			printf("\n %d is prime" , i); 
+		   flag = 1;
 		else 
-			printf("\n %d is composite", i); 
+			flag = 0;
 
 	}
 
 }
-
 void main()
 {
 	find_prime(10); 	
